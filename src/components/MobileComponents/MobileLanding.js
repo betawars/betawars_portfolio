@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
 import MobileNavBar from "./MobileNavebar";
 import Me from '../../assets/Images/profile-img.png'
+import MobileUnderConstruction from "./MobileUnderConstruction";
 // import MobileAbout from "./MobileAbout";
 // import MobileSkills from "./MobileSkills";
 // import MobileWork from "./MobileWork";
@@ -217,6 +218,9 @@ const MobileLanding = () => {
                     <span>Swipe down</span>
                 </ScrollIndicator>
             </HeroSection>
+            <Section>
+                <MobileUnderConstruction/>
+            </Section>
 
             {/* <Section id="about">
                 <MobileAbout />
