@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
 import { Facebook, Github, LinkedIn, Twitter, YouTube } from "../components/AllSvgs";
-import { DarkTheme } from "../components/Themes";
+import { darkTheme } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const Line = styled(motion.span)`
   width: 2px;
   height: 10vh;
   background-color: ${(props) =>
-    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+    props.color === "dark" ? darkTheme.text : darkTheme.body};
 `;
 
 const SocialIcons = (props) => {
@@ -49,7 +49,7 @@ const SocialIcons = (props) => {
             <Github
               width={25}
               height={25}
-              fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+              fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
             />
           </a>
         </motion.div>
@@ -73,7 +73,7 @@ const SocialIcons = (props) => {
             <LinkedIn
               width={25}
               height={25}
-              fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+              fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
             />
           </a>
         </motion.div>

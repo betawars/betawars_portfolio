@@ -1,6 +1,55 @@
 import React from "react";
-import styled, { keyframes } from 'styled-components'
-import {motion} from 'framer-motion'
+import styled, { createGlobalStyle, keyframes, ThemeProvider } from 'styled-components'
+import {AnimatePresence, motion} from 'framer-motion'
+import GlobalStyle from "../../globalStyles";
+import MobileLanding from "./MobileLanding";
+import { lightTheme } from "../Themes";
+const MobileGlobalStyle = createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: 'Inter', 'Source Sans Pro', sans-serif;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    :root {
+        --body-rgb: ${props => props.theme.bodyRgba};
+        --text-rgb: ${props => props.theme.textRgba};
+    }
+`;
+
+const MainContainer = styled.div`
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    background: ${props => props.theme.body};
+    color: ${props => props.theme.text};
+    margin: 0;
+    padding: 0;
+    
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        transition: all 0.3s ease;
+    }
+`;
+
 const Box = styled(motion.div)`
 
 position: absolute;
@@ -74,24 +123,33 @@ const Text = styled.div`
 
 const MobileProvider = (props) => {
     return (
-        <Box
-        initial={{height:0}}
-        animate={{height: '55vh'}}
-        transition={{ type: 'spring', duration:2, delay:1 }}
-        >
-            <SubBox>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                >
-                    <Text>
-                        <h6>Mobile view development in progress!</h6>
-                        <h6>Switch to desktop mode for better experience.</h6>
-                    </Text>
-                </motion.div>
-            </SubBox>
-        </Box>
+        // <Box
+        // initial={{height:0}}
+        // animate={{height: '55vh'}}
+        // transition={{ type: 'spring', duration:2, delay:1 }}
+        // >
+        //     <SubBox>
+        //         <motion.div
+        //             initial={{ opacity: 0 }}
+        //             animate={{ opacity: 1 }}
+        //             transition={{ duration: 1, delay: 2 }}
+        //         >
+        //             <Text>
+        //                 <h6>Mobile view development in progress!</h6>
+        //                 <h6>Switch to desktop mode for better experience.</h6>
+        //             </Text>
+        //         </motion.div>
+        //     </SubBox>
+        // </Box>
+        <ThemeProvider theme={lightTheme}>
+            <GlobalStyle />
+            <MobileGlobalStyle />
+            <MainContainer>
+                <AnimatePresence mode='wait'>
+                    <MobileLanding />
+                </AnimatePresence>
+            </MainContainer>
+        </ThemeProvider>
     )
 }
 

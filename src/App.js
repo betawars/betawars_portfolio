@@ -19,45 +19,26 @@ function App() {
   const location = useLocation();
   useEffect(() => emailjs.init("qF0ZSkp-SRC-nsEEh"), []);
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   return (
     <>
-      {
-        !isMobile ? (
-          <>
-            <GlobalStyle />
-
-            <ThemeProvider theme={lightTheme}>
-
-              <AnimatePresence mode='wait'>
-
-                <Routes key={location.pathname} location={location} >
-
-                  <Route path="/" element={<Main />} />
-
-                  <Route path="/about" element={<AboutPage />} />
-
-                  <Route path="/blog" element={<BlogPage />} />
-
-                  <Route path="/work" element={<WorkPage />} />
-
-                  <Route path="/skills" element={<MySkillsPage />} />
-
-                  <Route path="*" element={<Main click={true} />} />
-                </Routes>
-              </AnimatePresence>
-            </ThemeProvider>
-          </>
-        )
-
-          : (
-            <>
-              <MobileProvider/>
-            
-            
-            </>
-          )
-      }
-
+      <GlobalStyle />
+      <ThemeProvider theme={lightTheme}>
+        {!isMobile ? (
+          <AnimatePresence mode='wait'>
+            <Routes key={location.pathname} location={location}>
+              <Route path="/" element={<Main />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/work" element={<WorkPage />} />
+              <Route path="/skills" element={<MySkillsPage />} />
+              <Route path="*" element={<Main click={true} />} />
+            </Routes>
+          </AnimatePresence>
+        ) : (
+          <MobileProvider />
+        )}
+      </ThemeProvider>
     </>
   );
 }

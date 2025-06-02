@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styledd, { ThemeProvider } from 'styled-components'
-import { DarkTheme, lightTheme } from './Themes';
+import { darkTheme, lightTheme } from './Themes';
 
 import { styled } from '@mui/material/styles';
 
@@ -79,7 +79,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const Logo = styledd.h4`
 display: inline-block;
-color: ${DarkTheme.text};
+color: ${darkTheme.text};
 cursor: default;
 position: fixed;
 right: 3rem;
@@ -196,7 +196,7 @@ const MySkillsPage = () => {
     }
 
     return (
-        <ThemeProvider theme={DarkTheme}>
+        <ThemeProvider theme={darkTheme}>
 
             <WORK to="/work">
                 <motion.h2

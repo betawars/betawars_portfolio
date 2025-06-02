@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from 'react-scroll';
-import { DarkTheme } from "../Themes";
+import { darkTheme } from "../Themes";
 
 const List = styled.ul`
 
@@ -99,7 +99,7 @@ const MobileNavBar = (props) => {
                     </List>
                 </div>
                 <MobileMode>
-                    <Icons onClick={handleClick} style={{color:props.textColor?DarkTheme.text : DarkTheme.body}} className={state ? "fas fa-times" : "fas fa-bars"} />
+                    <Icons onClick={handleClick} style={{color:props.textColor?darkTheme.text : darkTheme.body}} className={state ? "fas fa-times" : "fas fa-bars"} />
                 </MobileMode>
             </NavBar>
 

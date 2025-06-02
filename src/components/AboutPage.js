@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import {DarkTheme} from './Themes';
+import {darkTheme} from './Themes';
 import {motion} from 'framer-motion'
 
 
@@ -124,7 +124,7 @@ const AboutPage = () => {
       };
 
     return (
-        <ThemeProvider theme={DarkTheme}>
+        <ThemeProvider theme={darkTheme}>
 
 
             <SKILLS to="/skills">

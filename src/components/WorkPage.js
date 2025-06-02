@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
+import { darkTheme } from "./Themes";
 import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
@@ -83,7 +83,7 @@ const WorkPage = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={darkTheme}>
       <SKILLS to="/skills">
         <motion.h2
           initial={{
