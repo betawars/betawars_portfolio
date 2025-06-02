@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import MobileNavBar from "./MobileNavebar";
 import Me from '../../assets/Images/profile-img.png'
 import MobileUnderConstruction from "./MobileUnderConstruction";
-// import MobileAbout from "./MobileAbout";
+import MobileAbout from "./MobileAbout";
 // import MobileSkills from "./MobileSkills";
 // import MobileWork from "./MobileWork";
 // import MobileContact from "./MobileContact";
@@ -217,14 +217,16 @@ const MobileLanding = () => {
                 >
                     <span>Swipe down</span>
                 </ScrollIndicator>
+                
             </HeroSection>
+            <Section id="about">
+                <MobileAbout />
+            </Section>
             <Section>
                 <MobileUnderConstruction/>
             </Section>
 
-            {/* <Section id="about">
-                <MobileAbout />
-            </Section>
+            {/* 
             
             <Section id="skills">
                 <MobileSkills />
