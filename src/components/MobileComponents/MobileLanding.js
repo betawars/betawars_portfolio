@@ -5,7 +5,7 @@ import MobileNavBar from "./MobileNavebar";
 import Me from '../../assets/Images/profile-img.png'
 import MobileUnderConstruction from "./MobileUnderConstruction";
 import MobileAbout from "./MobileAbout";
-// import MobileSkills from "./MobileSkills";
+import MobileSkills from "./MobileSkills";
 // import MobileWork from "./MobileWork";
 // import MobileContact from "./MobileContact";
 
@@ -222,15 +222,16 @@ const MobileLanding = () => {
             <Section id="about">
                 <MobileAbout />
             </Section>
+            <Section id="skills">
+                <MobileSkills />
+            </Section>
             <Section>
                 <MobileUnderConstruction/>
             </Section>
 
             {/* 
             
-            <Section id="skills">
-                <MobileSkills />
-            </Section>
+            
 
             <Section id="work">
                 <MobileWork />
