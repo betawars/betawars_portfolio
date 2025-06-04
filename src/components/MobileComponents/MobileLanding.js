@@ -6,6 +6,7 @@ import Me from '../../assets/Images/profile-img.png'
 import MobileUnderConstruction from "./MobileUnderConstruction";
 import MobileAbout from "./MobileAbout";
 import MobileSkills from "./MobileSkills";
+import MobileWork from "./MobileWork";
 // import MobileWork from "./MobileWork";
 // import MobileContact from "./MobileContact";
 
@@ -225,6 +226,9 @@ const MobileLanding = () => {
             <Section id="skills">
                 <MobileSkills />
             </Section>
+            <Section id="work">
+                <MobileWork />
+            </Section>
             <Section>
                 <MobileUnderConstruction/>
             </Section>
@@ -233,9 +237,7 @@ const MobileLanding = () => {
             
             
 
-            <Section id="work">
-                <MobileWork />
-            </Section>
+            
 
             <Section id="contact">
                 <MobileContact />
