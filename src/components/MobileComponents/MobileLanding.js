@@ -7,6 +7,7 @@ import MobileUnderConstruction from "./MobileUnderConstruction";
 import MobileAbout from "./MobileAbout";
 import MobileSkills from "./MobileSkills";
 import MobileWork from "./MobileWork";
+import MobileContact from "./MobileContact";
 // import MobileWork from "./MobileWork";
 // import MobileContact from "./MobileContact";
 
@@ -229,19 +230,21 @@ const MobileLanding = () => {
             <Section id="work">
                 <MobileWork />
             </Section>
+
+            <Section id="contact">
+                <MobileContact />
+            </Section>
+            
+
+            {/* 
+            
             <Section>
                 <MobileUnderConstruction/>
             </Section>
 
-            {/* 
-            
             
 
-            
-
-            <Section id="contact">
-                <MobileContact />
-            </Section> */}
+             */}
         </MainContainer>
     )
 }
